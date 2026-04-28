@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!--   
+             @@@@@@@@@@@@@@@           
+        @@@@@@@@@@@@@@@@@@@@@@         
+  @@@@@@@@@@@@@   @@@@@@@@@@@@@@@      
+ @@@@@@@@@@@@@  @@@@@@@@@@@@@@@@@@@@   
+@@@@@@@@@@@@@@@ @@@@@@@@ @@@@@@@@@@@@@ 
+@@@@@@@@@@@@@@@@@@@      @@@@@@@@@@@@@@ @2026 Cameron Wilson. All rights reserved.
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Corporate logos, branding, and trademarks
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ belong to their respective owners. 
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@ @@@@@@@@@@@@@@@@@@@@@@@@@   @@@@@@
+@@@@@@@@@@ @@@@@@@@@@@@@ @@@@@@   @@@@@
+@@@@@@@@@@  @@@@@@@@@@@ @@@@@@@  @@@@@@
+@@@@@@@     @@@@@@@@@   @@@@@@ @@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@       @@@@@@@@@@
+ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+      @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
+        @@@@@@@@@@@@@@@@@@@@@@@@       
+           @@@@@@@@@@@@@@@             
+              @@@@@@@  -->     
+
+<head>                           
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+   <title>Cameron Wilson's Digital Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+      <link href="styles.css" rel="stylesheet" />
+      <script src="animations.js"></script>
+</head>
+
+<body>
+<!--
+=======   
+Navigation
+=======
+-->
+<nav>
+    <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="icons/x-solid-full.svg" width="66" height="66" alt="x"></a>
+    <div class="overlay-content">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</div>
+
+<a href="index.html"><img src="icons/cw-logo.svg" width="148.539" height="75" alt="CW logo"></a>
+<img src="icons/bars-staggered-solid-full.svg" width="66.667" height="50" onclick="openNav()"
+alt="hamburger menu icon">
+    </nav>
+<!--
+=======   
+Lander
+=======
+-->
+<div class="content-margin">
+
+    <!--Wrap with flexbox when not tired-->
+    <div class="landing">
+        <div class="lander-text">
+            <p id="rainbow-hello">HELLO!</p>
+            <h2>My name is <mark>Cameron Wilson</mark>. I'm a <span class="rotato-potato">Visual Communicator</span>.</h2>
+            <h3>A Ohio-based <strong>Visual Communicator</strong> with projects in web development, branding, print production,
+                and packaging. </h3>
+
+            <div class="button-container">
+                <a class="button" href="projects.html">View Projects</a>
+                <a class="button" target="blank" href="CamBusiness-CV-Resume-FINAL.pdf">See Resume</a>
+            </div>
+        </div>
+        <div class="lander-carousel">
+            <div class="lander-image-container">
+                <img class="lander-image" src="images-index/placeholder.png" alt="Placeholder">
+                <img class="lander-image" src="images-index/placeholder.png" alt="Placeholder">
+                <img class="lander-image" src="images-index/placeholder.png" alt="Placeholder">
+                <img class="lander-image" src="images-index/placeholder.png" alt="Placeholder">
+            </div>
+        </div>
+    </div>
+
+
+<!--
+=======   
+Project Viewing Carousel
+=======
+-->
+
+<h1>View my Latest Projects:</h1>
+
+<div class="projects-carousel">
+    <div class="carousel-scroll">
+        <a href="project1-placeholder.html" class="project-card" id="project1">
+            <img src="images-project/placeholder.svg" alt="##############" width="320" height="225">
+            <h4>Placeholder Title</h4>
+            <div>
+                <small>Tagged1</small>
+                <small>Tagged2</small>
+            </div>
+        </a>
+        <a href="project1-placeholder.html" class="project-card" id="project2">
+            <img src="images-project/placeholder.svg" alt="##############" width="320" height="225">
+            <h4>Placeholder Title</h4>
+            <div>
+                <small>Tagged1</small>
+                <small>Tagged2</small>
+            </div>
+        </a>
+        <a href="project1-placeholder.html" class="project-card" id="project3">
+            <img src="images-project/placeholder.svg" alt="##############" width="320" height="225">
+            <h4>Placeholder Title</h4>
+            <div>
+                <small>Tagged1</small>
+                <small>Tagged2</small>
+            </div>
+        </a>
+        <a href="project1-placeholder.html" class="project-card" id="project4">
+            <img src="images-project/placeholder.svg" alt="##############" width="320" height="225">
+            <h4>Placeholder Title</h4>
+            <div>
+                <small>Tagged1</small>
+                <small>Tagged2</small>
+            </div>
+        </a>
+        <a href="project1-placeholder.html" class="project-card" id="project5">
+            <img src="images-project/placeholder.svg" alt="##############" width="320" height="225">
+            <h4>Placeholder Title</h4>
+            <div>
+                <small>Tagged1</small>
+                <small>Tagged2</small>
+            </div>
+        </a>
+        <a href="project1-placeholder.html" class="project-card" id="project6">
+            <img src="images-project/placeholder.svg" alt="##############" width="320" height="225">
+            <h4>Placeholder Title</h4>
+            <div>
+                <small>Tagged1</small>
+                <small>Tagged2</small>
+            </div>
+        </a>
+    </div>
+
+    <div aria-hidden class="carousel-scroll">
+<a href="project1-placeholder.html" class="project-card" id="project1">
+            <img src="images-project/placeholder.svg" alt="##############" width="320" height="225">
+            <h4>Placeholder Title</h4>
+            <div>
+                <small>Tagged1</small>
+                <small>Tagged2</small>
+            </div>
+        </a>
+        <a href="project1-placeholder.html" class="project-card" id="project2">
+            <img src="images-project/placeholder.svg" alt="##############" width="320" height="225">
+            <h4>Placeholder Title</h4>
+            <div>
+                <small>Tagged1</small>
+                <small>Tagged2</small>
+            </div>
+        </a>
+        <a href="project1-placeholder.html" class="project-card" id="project3">
+            <img src="images-project/placeholder.svg" alt="##############" width="320" height="225">
+            <h4>Placeholder Title</h4>
+            <div>
+                <small>Tagged1</small>
+                <small>Tagged2</small>
+            </div>
+        </a>
+        <a href="project1-placeholder.html" class="project-card" id="project4">
+            <img src="images-project/placeholder.svg" alt="##############" width="320" height="225">
+            <h4>Placeholder Title</h4>
+            <div>
+                <small>Tagged1</small>
+                <small>Tagged2</small>
+            </div>
+        </a>
+        <a href="project1-placeholder.html" class="project-card" id="project5">
+            <img src="images-project/placeholder.svg" alt="##############" width="320" height="225">
+            <h4>Placeholder Title</h4>
+            <div>
+                <small>Tagged1</small>
+                <small>Tagged2</small>
+            </div>
+        </a>
+        <a href="project1-placeholder.html" class="project-card" id="project6">
+            <img src="images-project/placeholder.svg" alt="##############" width="320" height="225">
+            <h4>Placeholder Title</h4>
+            <div>
+                <small>Tagged1</small>
+                <small>Tagged2</small>
+            </div>
+        </a>
+    </div>
+</div>
+
+<a class="button" id="project-seeall" href="projects.html">See All Projects</a>
+
+<!--
+=======   
+Contact Section
+=======
+-->
+
+<h1>Get In Touch</h1>
+
+<p class="contact-text">For any inquiries or comments, please visit the 
+    <a class="contact-links" href="contact.html">Contact</a> page. I am alternatively reachable
+    via <a class="contact-links" href="mailto:cambusiness@gmail.com">Email</a>.</p>
+
+   <!-- <p class="contact-text"> Also, be sure to check out my <a class="contact-links" href="#">Blog</a>, (Coming Soon)
+where I write about projects and share my opinions on the state of design!
+</p> -->
+</div>
+<!--
+=======   
+Contact Section
+=======
+-->
+    <footer>
+        <img src="icons/cw-logo-icon.svg" width="60" height="67.053" alt="CW Logo Icon" >
+
+        <div class="social-container">
+            <img class="socials" src="icons/square-behance-brands-solid-full.svg" width="30" height="30" alt="Social Media 1">
+            <img class="socials" src="icons/square-dribbble-brands-solid-full.svg" width="30" height="30" alt="Social Media 1">
+            <img class="socials" src="icons/square-linkedin-brands-solid-full.svg" width="30" height="30" alt="Social Media 1">
+            <img class="socials" src="icons/square-instagram-brands-solid-full.svg" width="30" height="30" alt="Social Media 1">
+        </div>
+
+        <p class="copyright">&copy; 2026 Cameron James Wilson. All rights reserved.</p>
+    </footer>
+</body>

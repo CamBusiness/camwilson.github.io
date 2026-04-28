@@ -1,0 +1,815 @@
+/*
+=======   
+Basic CSS reset and font additions
+=======
+*/
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Bebas Neue Regular";
+    src: url(fonts/BebasNeue-book.otf);
+}
+
+@font-face {
+    font-family: "Bebas Neue Bold";
+    src: url(fonts/BebasNeue-Bold.otf);
+}
+
+::selection {
+  background-color: black;
+  color: white;
+}
+/*
+=======   
+Navigation styling
+=======
+*/
+nav {
+  position: sticky;
+  top: 0;
+  background-color: black;
+  width: 100%;
+  height: 125px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9;
+}
+
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-y: hidden;
+  transition: 1s;
+  z-index: 10;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  font-family: "Jost";
+  font-weight: normal;
+  text-align: center;
+  color: white;
+  display: block;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #808080;
+  transition: .3s;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/*
+=======   
+Lander Styling
+=======
+*/
+
+.content-margin {
+    margin: 20px;
+}
+
+p#rainbow-hello {
+    font-family: "Bebas Neue Bold";
+    font-size: 75pt;
+    text-align: left;
+}
+
+h2 {
+    font-size: 25pt;
+    line-height: 25pt;
+    font-family: "Jost";
+    font-weight: bold;
+    margin-bottom: 20px;
+    max-width: 400px;
+    text-align: left;
+}
+
+.rotato-potato {
+    text-decoration: underline;
+}
+
+h2 mark {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    height: 100%;
+}
+
+h3 {
+  margin-bottom: 25px;
+  text-align: left;
+  font-family: "Jost";
+  font-weight: normal;
+  font-size: 16pt;
+  line-height: 20pt;
+  max-width: 600px;
+  text-align: left;
+}
+
+h3 strong {
+  font-weight: 900;
+}
+
+.italic {
+  font-family: italic;
+}
+
+.button-container {
+  margin-top: 50px;
+  max-width: 350px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.button {
+  font-family: "Bebas Neue Bold";
+  color: black;
+  font-size: 18.75pt;
+  padding: 7.5px 15px;
+  border: 2.5px solid black;
+  transition: .5s;
+}
+
+.button:hover {
+  color: white;
+  background-color: black;
+  transition: .3s ease;
+}
+
+.lander-carousel {
+  display: none; /*For now... Muhuhuahuahuah!!! */
+}
+
+/*
+=======   
+Project Viewing Carousel
+=======
+*/
+
+h1 {
+  margin: 100px 0 25px 0;
+  font-family: "Bebas Neue Regular";
+  font-size: 50pt;
+  line-height: 50pt;
+}
+
+.projects-carousel {
+  margin: 25px auto;
+  width: 100%;
+  display: flex;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  gap: 1em;
+  overscroll-behavior-x: none;
+  pointer-events: auto;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-scroll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  animation: spin 40s infinite linear;
+}
+
+.project-card {
+  flex: 0 0 auto;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  align-items: center;
+  height: 360px;
+  width: 360px;
+  padding: 1em;
+  background-color: black;
+  border-radius: .2em;
+  text-align: center;
+  align-content: center;
+}
+
+.project-card img {
+  border: 2.5px solid white;
+  margin: auto auto;
+}
+
+.project-card h4 {
+  font-family: "Bebas Neue Bold";
+  font-size: 35pt;
+  color: white;
+}
+
+.project-card div {
+  width: 250;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-card small {
+  margin: 0 10px;
+  padding: 2.5px 5px;
+  font-family: "Jost";
+  font-weight: 300;
+  font-size: 16pt;
+  color: white;
+  background-color: #333333ff;
+}
+
+@keyframes spin {
+  from {translate: 0;}
+  to {translate: -100%;}
+}
+
+.projects-carousel:hover .carousel-scroll {
+  animation-play-state: paused;
+}
+
+a#project-seeall {
+  margin: 0 auto;
+  display: block;
+  width: fit-content;
+}
+
+/*
+=======   
+Contact
+=======
+*/
+
+.contact-text {
+  font-family: "Jost";
+  font-weight: 600;
+  font-size: 25pt;
+  line-height: 29pt;
+  margin-bottom: 25px;
+}
+
+.contact-links {
+  font-weight: 800;
+  color: black;
+  transition: .3s ease;
+  text-decoration: underline 6px rgb(0, 0, 0, 1);
+}
+
+.contact-links:hover {
+  text-decoration: underline 6px rgb(255, 255, 255, 0)
+}
+
+/*
+=======   
+Footer
+=======
+*/
+
+footer {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: black;
+}
+
+.copyright {
+  color: white;
+  font-family: "Jost";
+  font-size: 12pt;
+  font-weight: 300;
+}
+
+.social-container {
+  width: 150px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*
+=======   
+CONTACT PAGE
+=======
+*/
+
+h1#contact-head {
+  margin: 35px 0 0 0;
+  width: 100%;
+}
+
+label {
+  font-family: "Jost";
+  font-weight: 600;
+  font-size: 16pt;
+  margin-bottom: 10px;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 7.5px;
+  border: 2.5px solid black;
+  color: gray;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  font-family: "Jost";
+  font-weight: 300;
+  font-size: 16pt;
+}
+
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 14.8px;
+  margin: 0 0 25px 0;
+  font-weight: 400;
+}
+
+input[type=submit] {
+  margin: 0 auto;
+  display: block;
+  width: fit-content;
+  font-family: "Bebas Neue Bold";
+  color: black;
+  font-size: 18.75pt;
+  padding: 7.5px 15px;
+  border: 2.5px solid black;
+  transition: .5s;
+}
+
+/*
+=======   
+PROJECTS PAGE
+=======
+*/
+
+.projects-lander-heading {
+    margin-top: 75px;
+    font-family: "Bebas Neue Bold";
+    font-size: 75pt;
+    text-align: left;
+}
+
+.projects-lander-subhead {
+  max-width: 1000px;
+  line-height: 29pt;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.project-tile {
+  background-color:#808080;
+  aspect-ratio: 3 / 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  transition: .3s ease;
+}
+
+.project-tile h1 {
+  margin: 0;
+  text-decoration: none;
+  font-family: "Bebas Neue Bold";
+  color: black;
+  opacity: 0;
+  font-size: 40pt;
+  transition: .3s ease;
+  z-index: 1;
+}
+
+.project-tile:hover h1 {
+  opacity: 1;
+}
+
+.project-tile {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-tile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  background-size: inherit;
+  transition: .3s ease;
+  z-index: 0;
+}
+
+.project-tile:hover::before {
+  filter: blur(15px);
+}
+
+#project-tile1 {
+  background-image: url(images-project/project1/underbrewcoffee-tile.png);
+  background-size: contain;
+}
+
+#project-tile2 {
+  background-image: url(images-index/placeholder.png);
+  background-size: contain;
+}
+
+#project-tile3 {
+  background-image: url(images-index/placeholder.png);
+  background-size: contain;
+}
+
+#project-tile4 {
+  background-image: url(images-index/placeholder.png);
+  background-size: contain;
+}
+
+/*
+=======   
+INDIVIDUAL PROJECTS PAGE
+=======
+*/
+
+.project-title {
+  aspect-ratio: 4/1;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-title h1 {
+  margin: 25px;
+  font-family: "Bebas Neue Bold";
+  font-size: 40pt;
+  text-align: center;
+  line-height: 40pt;
+}
+
+.project-subhead {
+  margin: 100px 0 25px 0;
+  font-family: "Bebas Neue Regular";
+  font-size: 50pt;
+  line-height: 50pt;
+  max-width: 100%;
+}
+
+.project-overview {
+  display: none;
+}
+
+.project-bodycopy {
+  margin: 0 0 25px 0;
+  font-family: "Jost";
+  font-weight: 400;
+  font-size: 16pt;
+  line-height: 22pt;
+}
+
+.project-figuretext {
+  display: block;
+  margin: 5px 0 25px 0;
+  font-family: "Jost";
+  font-weight: 300;
+  font-size: 12pt;
+}
+
+@media screen and (min-width: 700px) {
+
+/*
+=======   
+Lander
+=======
+*/
+
+p#rainbow-hello {
+    font-size: 100pt;
+}
+
+  h2 {
+    font-size: 31.25pt;
+    line-height: 31.25pt;
+    margin-bottom: 35px;
+    max-width: 575px;
+}
+
+h3 {
+  font-size: 20pt;
+  line-height: 25pt;
+  margin-bottom: 25px;
+}
+
+.button-container {
+  max-width: 400px;
+}
+
+.button {
+  font-size: 25pt;
+}
+
+/*
+=======   
+Project Carousel
+=======
+*/
+
+h1 {
+  margin: 125px 0 35px 0;
+  font-size: 62.5pt;
+  line-height: 62.5pt;
+}
+
+/*
+=======   
+Contact 
+=======
+*/
+
+.contact-text {
+  font-size: 32.5pt;
+  line-height: 38.5pt;
+  margin-bottom: 35px;
+  max-width: 900px;
+}
+
+/*
+=======   
+Contact PAGE
+=======
+*/
+
+input[type=submit] {
+  font-size: 25pt;
+}
+
+/*
+=======   
+PROJECTS PAGE
+=======
+*/
+
+.projects-lander-heading {
+    font-size: 100pt;
+}
+
+.projects-lander-subhead {
+  line-height: 36pt;
+}
+
+/*
+=======   
+INDIVIDUAL PROJECTS PAGE
+=======
+*/
+
+.project-title {
+  aspect-ratio: 5/1
+}
+
+.project-title h1 {
+  font-size: 50pt;
+  line-height: 50pt;
+}
+
+.project-subhead {
+  margin: 125px 0 35px 0;
+  font-size: 62.5pt;
+  line-height: 62.5pt;
+}
+
+.project-bodycopy {
+  font-size: 20pt;
+  line-height: 25pt;
+  max-width: 650px;
+}
+
+.project-figuretext {
+  font-size: 14pt;
+}
+
+}
+
+@media screen and (min-width: 1000px) {
+
+.content-margin {
+  margin: 20px 60px;
+}
+  /*
+=======   
+Navigation
+=======
+*/
+.overlay-content a {
+    font-size: 35pt;
+  }
+
+/*
+=======   
+Lander
+=======
+*/
+
+.landing{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+}
+
+.lander-carousel {
+  display: block;
+  width: 50vw;
+  height: 100vh;
+  background-color: white;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  overscroll-behavior-y: none;
+  pointer-events: auto;
+}
+
+.lander-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.lander-image-container {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 25px;
+  align-items: center;
+  justify-content: space-around;
+  animation: vertical-spin 25s infinite linear;
+}
+
+@keyframes vertical-spin {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+.lander-image {
+ width: 100%;
+}
+
+/*
+=======   
+Contact PAGE
+=======
+*/
+
+.form-container {
+  width: 75%;
+  margin: 0 auto;
+}
+
+/*
+=======   
+Projects PAGE
+=======
+*/
+
+.projects-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /*
+=======   
+Individual Projects PAGE
+=======
+*/
+
+.project-title h1 {
+  font-size: 70pt;
+  line-height: 70pt;
+}
+
+.project-preface-overview {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+
+}
+
+.project-bodycopy {
+  margin: 0 0 35px 0; 
+  font-size: 22pt;
+  line-height: 28pt;
+  max-width: 700px;
+}
+
+.project-bodycopy-column {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 35px;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  height: auto;
+}
+
+.project-overview {
+  max-width: 300px;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.project-overview h2 {
+  margin: 125px 0 25px 0;
+  font-family: "Jost";
+  font-weight: 900;
+  font-size: 20pt;
+}
+
+.project-overview h3 {
+  margin: 0;
+  font-family: "Jost";
+  font-weight: 800;
+  font-size: 18pt;
+}
+
+.project-overview h4 {
+  margin-bottom: 10px;
+  font-family: "Jost";
+  font-weight: 500;
+  font-size: 16pt;
+  line-height: 21pt;
+}
+
+.project-figuretext {
+  font-size: 16pt;
+margin: 10px 0 35px 0;
+}
+}
+
+@media screen and (min-width: 1920px) {
+/*
+=======   
+Individual Projects PAGE
+=======
+*/
+
+.project-overview {
+  max-width: 325px;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.project-overview h2 {
+  margin: 125px 0 35px 0;
+  font-size: 22pt;
+}
+
+.project-overview h3 {
+  font-size: 20pt;
+}
+
+.project-overview h4 {
+  margin-bottom: 20px;
+  font-size: 18pt;
+  line-height: 28pt;
+}
+
+}
